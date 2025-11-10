@@ -1,4 +1,3 @@
-// Arduino Nano 33 IoT - HC-SR04 + BLE
 #include <ArduinoBLE.h>
 
 const int trigPin = 2;
