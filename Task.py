@@ -6,8 +6,8 @@ import struct
 import time
 
 
-LED_PIN = 11       # Physical pin 11 (GPIO17)
-BUZZER_PIN = 13    # Physical pin 13 (GPIO27)
+LED_PIN = 11      
+BUZZER_PIN = 13   
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)            # Use physical pin numbering
@@ -20,7 +20,7 @@ led_pwm.start(0)
 
 
 def control_output(distance):
-    """Controls LED brightness and buzzer beeping based on distance."""
+   
     print(f"Distance: {distance:.2f} cm")
 
     # Limit the distance range to 0–100 cm
@@ -52,7 +52,7 @@ def control_output(distance):
 
 
 def handle_data(sender, data):
-    """Called whenever new Bluetooth data is received."""
+ 
     try:
         # Decode the 4-byte float sent by Arduino
         distance = struct.unpack('<f', data)[0]
